@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="app_name">내 마스크는 어디에</string>
+
+    <!-- Message used on AlertDialog -->
+    <string name="permission_denied">사용자의 위치에 접근할 수 있는 권한을 획득하지 못했습니다.</string>
+    <string name="permission_need">이 앱은 사용자의 위치에 접근할 수 있는 권한이 필요합니다.</string>
+    <string name="gps_need">위치를 확인하려면 GPS를 켜주시기 바랍니다.</string>
+
+    <!-- Dialog Button-->
+    <string name="ok">확인</string>
+    <string name="cancel">취소</string>
+
+    <!-- Button Message -->
+    <string name="address_search">위치 검색</string>
+    <string name="refresh_current_location">이 위치에서\n마스크 찾기</string>
+
+    <!-- Address -->
+    <string name="address_name">지번 주소</string>
+    <string name="road_address_name">도로명 주소</string>
+
+    <!-- Notice -->
+    <string name="notice_title">마스크 수량</string>
+    <string name="notice_plenty">100개 이상</string>
+    <string name="notice_some">99개 ~ 30개</string>
+    <string name="notice_few">30개 미만</string>
+    <string name="notice_empty">재고 없음</string>
+
+    <!-- Store Information -->
+    <string name="mask">공적 마스크</string>
+    <string name="warehousing_time">입고 시간:</string>
+    <string name="update_time">갱신 시간:</string>
+</resources>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FindStoreFragment"
+    android:background="@color/colorBlueGreen">
+
+    <RelativeLayout
+        android:id="@+id/kakao_map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:id="@+id/btn_address_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/address_search"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorGray"
+        android:background="@drawable/custom_corner_shape_with_stroke"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawableTint="@color/colorGray"
+        android:drawablePadding="10dp" />
+
+    <LinearLayout
+        android:id="@+id/notice_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/btn_address_search"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_corner_shape_with_stroke">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/btn_hide"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="@string/notice_title"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+            <Button
+                android:id="@+id/btn_hide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:background="@drawable/custom_circle_shape_cancel"
+                android:drawableRight="@drawable/ic_cancel"
+                android:drawableTint="@color/colorBrightGray"
+                android:drawablePadding="10dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:paddingBottom="5dp"
+                android:gravity="center"
+                android:text="@string/notice_plenty"
+                android:textSize="10dp"
+                android:textColor="@color/colorGray"
+                android:drawableLeft="@drawable/ic_circle"
+                android:drawableTint="@color/colorMaskGreen"
+                android:drawablePadding="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:paddingBottom="5dp"
+                android:gravity="center"
+                android:text="@string/notice_some"
+                android:textSize="10dp"
+                android:textColor="@color/colorGray"
+                android:drawableLeft="@drawable/ic_circle"
+                android:drawableTint="@color/colorMaskYellow"
+                android:drawablePadding="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:gravity="center"
+                android:text="@string/notice_few"
+                android:textSize="10dp"
+                android:textColor="@color/colorGray"
+                android:drawableLeft="@drawable/ic_circle"
+                android:drawableTint="@color/colorMaskRed"
+                android:drawablePadding="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:gravity="center"
+                android:text="@string/notice_empty"
+                android:textSize="10dp"
+                android:textColor="@color/colorGray"
+                android:drawableLeft="@drawable/ic_circle"
+                android:drawableTint="@color/colorMaskGray"
+                android:drawablePadding="5dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:indeterminateTint="@color/colorPrimaryBright"
+        style="?android:attr/progressBarStyleLarge"/>
+
+    <ToggleButton
+        android:id="@+id/btn_current_location"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="30dp"
+        android:background="@drawable/current_location_btn_selector"
+        android:textOn=""
+        android:textOff=""/>
+
+    <Button
+        android:id="@+id/btn_refresh_current_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="25dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/refresh_current_location"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@drawable/custom_corner_shape_with_stroke"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawableTint="@color/colorPrimaryDark"
+        android:drawablePadding="10dp"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30dp"
+        android:paddingLeft="7.5dp"
+        android:background="@drawable/custom_circle_shape"
+        android:drawableLeft="@drawable/ic_refresh" />
+
+</RelativeLayout>
